@@ -13,17 +13,22 @@
 <div style="padding:50px;margin:45px;width:50%;margin:auto;background-color:white;">
 
   <h1>
-      Memorisation in NMT: demo
+      Memorisation cartography for machine translation: a demo
   </h1>
 
+  In the paper, we use three metrics to position examples on `memorisation maps'. Here, you can select the map you would like to inspect, and hover over individual data points
+  to inspect individual source-target pairs, for a language and performance metric of your choosing.
+  Per graph, ten thousand randomly sampled examples are included. 
+  </br>
+
     <p>
-    <b>Visualise data for the following language:</b>
+    <b>Language:</b>
         <label class="radio">German <input type="radio" name="language" value="de" onclick="replaceScatter()" checked="checked"></label>
         <label class="radio">Dutch <input type="radio" name="language" value="nl" onclick="replaceScatter()"></label>
         <label class="radio">French <input type="radio" name="language" value="fr" onclick="replaceScatter()"></label>
         <label class="radio">Spanish <input type="radio" name="language" value="es" onclick="replaceScatter()"></label>
         <label class="radio">Italian <input type="radio" name="language" value="it" onclick="replaceScatter()"></label></br>
-    <b>And the following performance measure:</b>
+    <b>Performance metric:</b>
         <label class="radio">likelihood <input type="radio" name="metric" value="False" onclick="replaceScatter()" checked="checked"></label>
         <label class="radio">BLEU <input type="radio" name="metric" value="True" onclick="replaceScatter()"></label>
     </p>
