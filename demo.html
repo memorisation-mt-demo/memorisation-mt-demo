@@ -17,24 +17,28 @@
   </h1>
 
     <p>
-    <b>Language:</b>
-        <label class="radio">Dutch <input type="radio" name="language" value="dutch" onclick="replaceScatter()" checked="checked"></label>
-        <label class="radio">German <input type="radio" name="language" value="german" onclick="replaceScatter()"></label>
-        <label class="radio">French <input type="radio" name="language" value="french" onclick="replaceScatter()"></label>
-        <label class="radio">Spanish <input type="radio" name="language" value="spanish" onclick="replaceScatter()"></label>
-        <label class="radio">Italian <input type="radio" name="language" value="italian" onclick="replaceScatter()"></label>
+    <b>Visualise data for the following language:</b>
+        <label class="radio">German <input type="radio" name="language" value="de" onclick="replaceScatter()" checked="checked"></label>
+        <label class="radio">Dutch <input type="radio" name="language" value="nl" onclick="replaceScatter()"></label>
+        <label class="radio">French <input type="radio" name="language" value="fr" onclick="replaceScatter()"></label>
+        <label class="radio">Spanish <input type="radio" name="language" value="es" onclick="replaceScatter()"></label>
+        <label class="radio">Italian <input type="radio" name="language" value="it" onclick="replaceScatter()"></label>
+    <b>And the following performance measure:</b>
+        <label class="radio">likelihood <input type="radio" name="metric" value="False" onclick="replaceScatter()" checked="checked"></label>
+        <label class="radio">BLEU <input type="radio" name="metric" value="True" onclick="replaceScatter()"></label>
     </p>
 
 
     <div>
-      <iframe id="scatter" frameborder="0" src="figures/dutch.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
+      <iframe id="scatter" frameborder="0" src="figures/de_hypothesis-based=False.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
     </div>
 
     <script>
       function replaceScatter() {
         var language = document.querySelector("input[name='language']:checked").value;
+        var metric = document.querySelector("input[name='metric']:checked").value;
         document.getElementById("scatter").src =
-          "figures/"+ language + ".html";
+          "figures/"+ language + "hypothesis-based=" + metric + ".html";
       }
     </script>
 </div>
