@@ -5,15 +5,15 @@
   <style>
   body {
     background-color: #e4f0f3;
-    font-family: 'Inconsolata';font-size: 22px;
+    font-family: 'Inconsolata';font-size: 17;
   }
   </style>
   </head>
 
-<div style="padding:50px;margin:45px;width:70%;margin:auto;background-color:white;">
+<div style="padding:50px;margin:45px;width:50%;margin:auto;background-color:white;">
 
   <h1>
-      Explore datapoints
+      Memorisation in NMT: demo
   </h1>
 
     <p>
@@ -22,7 +22,7 @@
         <label class="radio">Dutch <input type="radio" name="language" value="nl" onclick="replaceScatter()"></label>
         <label class="radio">French <input type="radio" name="language" value="fr" onclick="replaceScatter()"></label>
         <label class="radio">Spanish <input type="radio" name="language" value="es" onclick="replaceScatter()"></label>
-        <label class="radio">Italian <input type="radio" name="language" value="it" onclick="replaceScatter()"></label>
+        <label class="radio">Italian <input type="radio" name="language" value="it" onclick="replaceScatter()"></label></br>
     <b>And the following performance measure:</b>
         <label class="radio">likelihood <input type="radio" name="metric" value="False" onclick="replaceScatter()" checked="checked"></label>
         <label class="radio">BLEU <input type="radio" name="metric" value="True" onclick="replaceScatter()"></label>
@@ -38,7 +38,7 @@
         var language = document.querySelector("input[name='language']:checked").value;
         var metric = document.querySelector("input[name='metric']:checked").value;
         document.getElementById("scatter").src =
-          "figures/"+ language + "hypothesis-based=" + metric + ".html";
+          "figures/"+ language + "_hypothesis-based=" + metric + ".html";
       }
     </script>
 </div>
