@@ -35,8 +35,25 @@
 
 
     <div>
-      <iframe id="scatter" frameborder="0" src="figures/de_hypothesis-based=False.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
+      <iframe id="scatter" frameborder="0" src="figures/de_hypothesis-based=False.html" style="height:50%;width:100%;border:none" scrolling=no></iframe>
+
+      <h2>
+          Formulaic phrases on the memorisation map
+      </h2>
+      <h3>
+          Proverbs:
+      </h3>
+      <iframe id="scatter_proverbs" frameborder="0" src="figures/nl_proverbs.html" style="height:50%;width:100%" scrolling=no></iframe>
+      <h3>
+          Idioms:
+          <iframe id="scatter_idioms" frameborder="0" src="figures/nl_idioms.html" style="height:50%;width:100%" scrolling=no></iframe>
+      </h3>
+      <h3>
+          Non-compositional noun compounds:
+      </h3>
+      <iframe id="scatter_noncomp_compounds" frameborder="0" src="figures/nl_non-comp_compounds.html" style="height:50%;width:100%" scrolling=no></iframe>
     </div>
+
 
     <script>
       function replaceScatter() {
@@ -46,17 +63,5 @@
           "figures/"+ language + "_hypothesis-based=" + metric + ".html";
       }
     </script>
-
-
-    <div>
-      <iframe id="scatter" frameborder="0" src="figures/nl_proverbs.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
-    </div>
-    <div>
-      <iframe id="scatter" frameborder="0" src="figures/nl_idioms.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
-    </div>
-    <div>
-      <iframe id="scatter" frameborder="0" src="figures/nl_non-comp_compounds.html" style="height:90%;width:100%;border:none" scrolling=no></iframe></div>
-    </div>
-
 
 </div>
